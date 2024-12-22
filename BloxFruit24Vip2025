@@ -1,6 +1,2 @@
 loadstring(game:HttpGet("https://raw.githubusercontent.com/VanThanhIOS/FixLagAlexSibikidi/refs/heads/main/MainAntilag.lua.txt"))()
-getgenv().Team = "Marines"
-
-getgenv().Hide_Menu = false
-
-loadstring(game:HttpGet("https://apixerohub.x10.mx/main.lua"))()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/VanThanhIOS/FixLagAlexSibikidi/refs/heads/main/alexfixlagvip.lua.txt"))()
