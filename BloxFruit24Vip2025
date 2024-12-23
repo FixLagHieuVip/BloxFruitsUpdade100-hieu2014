@@ -1,2 +1,1 @@
 loadstring(game:HttpGet("https://raw.githubusercontent.com/VanThanhIOS/FixLagAlexSibikidi/refs/heads/main/MainAntilag.lua.txt"))()
-loadstring(game:HttpGet("https://raw.githubusercontent.com/VanThanhIOS/FixLagAlexSibikidi/refs/heads/main/alexfixlagvip.lua.txt"))()
