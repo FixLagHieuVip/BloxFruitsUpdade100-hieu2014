@@ -4,10 +4,14 @@ local PhantomForcesWindow = Library:NewWindow("hieudepzaik14")
  
 local KillingCheats = PhantomForcesWindow:NewSection("Main FixLagGame")
  
-KillingCheats:CreateButton("FixLagGame", function()
-  loadstring(game:HttpGet("https://raw.githubusercontent.com/VanThanhIOS/MakeMenu/refs/heads/main/mainv1.lua.txt"))()
-end)
- 
+KillingCheats:CreateButton("scriptXeroHub", function()
+  getgenv().Team = "Marines"
+
+getgenv().Hide_Menu = false
+
+loadstring(game:HttpGet("https://apixerohub.x10.mx/main.lua"))()
+end) 
+
 KillingCheats:CreateButton("FixLagGame", function()
   local ToDisable = {
 	Textures = true,
@@ -18,7 +22,7 @@ KillingCheats:CreateButton("FixLagGame", function()
 }
  
 local ToEnable = {
-	FullBright = false
+	FullBright = true
 }
  
 local Stuff = {}
@@ -33,14 +37,14 @@ for _, v in next, game:GetDescendants() do
  
 	if ToDisable.Particles then
 		if v:IsA("ParticleEmitter") or v:IsA("Smoke") or v:IsA("Explosion") or v:IsA("Sparkles") or v:IsA("Fire") then
-			v.Enabled = false
+			v.Enabled = true
 			table.insert(Stuff, 1, v)
 		end
 	end
  
 	if ToDisable.VisualEffects then
 		if v:IsA("BloomEffect") or v:IsA("BlurEffect") or v:IsA("DepthOfFieldEffect") or v:IsA("SunRaysEffect") then
-			v.Enabled = false
+			v.Enabled = true
 			table.insert(Stuff, 1, v)
 		end
 	end
