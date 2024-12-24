@@ -93,8 +93,8 @@ KillingCheats:CreateButton("Unlock Fps", function()
 end
 end)
 
-local KillingCheats = PhantomForcesWindow:NewSection("Main Speed")
-
+local KillingCheats = PhantomForcesWindow:NewSection("script nhặt rương)
+loadstring(game:HttpGet("https://raw.githubusercontent.com/xxhumggxx/SkullHub/refs/heads/main/ChestV2.lua"))()
 KillingCheats:CreateTextbox("Speed", function(value)
 game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = value
 end)
