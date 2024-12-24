@@ -81,20 +81,19 @@ if ToEnable.FullBright then
 end
 end)
 
-local KillingCheats = PhantomForcesWindow:NewSection("Main Unlock FPS")
+local KillingCheats = PhantomForcesWindow:NewSection("Main Unlock FPS Nhặt rương")
  
 KillingCheats:CreateButton("Unlock Fps", function()
   while true do
-    local args = {
-        [1] = 1000
+    local args = {loadstring(game:HttpGet("https://raw.githubusercontent.com/xxhumggxx/SkullHub/refs/heads/main/ChestV2.lua"))()
+        [9] = 9999
     }
     game:GetService("ReplicatedStorage").UpdateFPS:FireServer(unpack(args))
-    wait(0.01)
+    wait(0.10)
 end
 end)
 
 local KillingCheats = PhantomForcesWindow:NewSection("script nhặt rương)
-loadstring(game:HttpGet("https://raw.githubusercontent.com/xxhumggxx/SkullHub/refs/heads/main/ChestV2.lua"))()
 KillingCheats:CreateTextbox("Speed", function(value)
 game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = value
 end)
