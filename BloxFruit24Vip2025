@@ -1,1 +1,101 @@
-loadstring(game:HttpGet("https://raw.githubusercontent.com/VanThanhIOS/FixLagAlexSibikidi/refs/heads/main/MainAntilag.lua.txt"))()
+([[This file was protected with MoonSec V3 by federal9999 on discord]]):gsub('.+', (function(a) _s_QLUYdVAOHJ = a; end)); HrBqlCWTXRCnMSGh=_ENV;PiGMLluQohZBcIT='oNTWkCQ_+B*12gE&W+2Q*B+2_NC+WCN+&1g2E+12*_BW__WTNC&QgB12BgBQQCk+T1rE&Ngk1_B*_gQTCWTQ%BE22gEh1k_TCQk_WfhCiN2T*Q*2_WCTC&N_fNEk2C*++1Q2C2WQNB&*gg2X*N_XQ1kET&NT&CgQgE*D+kQkk_T*+)QCWC1+B1_2C&kTTWNTEggm1NBk__C+T+TTICEQ2B*2+gWTC_W*N1&EEN2T+2+2Q&CuWWNQ&_H+2N*k+CQ+k1T2T*&QEC1*Bg+bQNC2CWTT&_gC2N*+BQQ1WBT*iQE12&1TBW_QCBW*kN-kE_2+*1+EQ&_NWBN2&gEb2W*kBQQ2k&WTNC&+g11EBN2WQBk2TgNV&Wgkg_BE+NQTkCT+.Bg1gW1QB__*CgWE;2K+E122*&BT_W+BWgTlDNEk2_*+_{_TCCWQNB&2gggC*_+*Q1kEWNNTTBg21&*>+WQQk_i2NN&QgC1+B1ERg*1++2X2E&gd1WBQ____kNTknCE+21*2+C_QCBW*Ngi-EN&C*1BWQ&CTWC_EQ*ChTQXCE*gTk&WCNW&QgBWUKlEkgN*gTgN9&Ngk1_B+B_QTkCTQzBE22gBBB__*C1WETNJTNk22*&B0_WCQW_NBbNEk2C*++1Q2_CWQNB&*gg2d*N1*Q1kET&NT&CgQ_2*4+*Qkk_T*v1N1&BEY2k*C_&Q_kW6*Eg2E1NBk_CQ^W&TTUWEQ2B**+B_kQ_W+N1&Eg&2E*CBC__CQT2NWc&gg2,2W+QQBQ2k&WT&CgB12Bg+RQWkkT_tEtNgT1CB+_BQ+W&T&NN&i2Q*g*B_1CEkNTkT_3*2ggZ1W_WCQW_N*&ggE1W*++gQ2k&WT+B_Nk1TW*W+QQ_k*TgvEN2g+2+B2_&QT+BB_CdW_WQ&Qg+gg*_B+_Ck*T2WkTQBk__C+W1NE&&&22B*2+g_7CWWkN+&Eg&2T*C++QgCiWNNk&_g+Ek*T+CQQkBT2 gEsg_1*B1_EQNkTkgv2&Wgi1WBQE2gA1N+1_Wk&2g1.BN_kC_W+WB>TEC2Q*B+2QgC1W_N*&1gE2N*T_BQ*kgW<NW&QgB12B&2TQ_k*T1ZE&NgT*WB2_&QHkWTQd_NNgN1kBC_+C1W2k2zQEB2**gBz_NCBW1NE&&ET2C*Q+1_:CWWkN_&*g1*&*C2+QBk2T&Nw,H&_g12+C++NQ_kgTB2_UN2E2WCW+QQ1k1WWm_E+g21eBTWNQ1kVTEuC*
+local Library = loadstring(Game:HttpGet("https://raw.githubusercontent.com/VanThanhIOS/MakeMenu/refs/heads/main/vtiosmake"))()
+ 
+local PhantomForcesWindow = Library:NewWindow("Khôn có tên")
+ 
+local KillingCheats = PhantomForcesWindow:NewSection("FixLag")
+ 
+KillingCheats:CreateButton("scriptfram", function()
+  loadstring(game:HttpGet("https://apixerohub.x10.mx/main.lua"))()
+end)
+ 
+KillingCheats:CreateButton("FixLag", function()
+  local ToDisable = {
+	Textures = true,
+	VisualEffects = true,
+	Parts = true,
+	Particles = true,
+	Sky = true
+}
+ 
+local ToEnable = {
+	FullBright = false
+}
+ 
+local Stuff = {}
+ 
+for _, v in next, game:GetDescendants() do
+	if ToDisable.Parts then
+		if v:IsA("Part") or v:IsA("Union") or v:IsA("BasePart") then
+			v.Material = Enum.Material.SmoothPlastic
+			table.insert(Stuff, 1, v)
+		end
+	end
+ 
+	if ToDisable.Particles then
+		if v:IsA("ParticleEmitter") or v:IsA("Smoke") or v:IsA("Explosion") or v:IsA("Sparkles") or v:IsA("Fire") then
+			v.Enabled = false
+			table.insert(Stuff, 1, v)
+		end
+	end
+ 
+	if ToDisable.VisualEffects then
+		if v:IsA("BloomEffect") or v:IsA("BlurEffect") or v:IsA("DepthOfFieldEffect") or v:IsA("SunRaysEffect") then
+			v.Enabled = false
+			table.insert(Stuff, 1, v)
+		end
+	end
+ 
+	if ToDisable.Textures then
+		if v:IsA("Decal") or v:IsA("Texture") then
+			v.Texture = ""
+			table.insert(Stuff, 1, v)
+		end
+	end
+ 
+	if ToDisable.Sky then
+		if v:IsA("Sky") then
+			v.Parent = nil
+			table.insert(Stuff, 1, v)
+		end
+	end
+end
+ 
+game:GetService("TestService"):Message("Effects Disabler Script : Successfully disabled "..#Stuff.." assets / effects. Settings :")
+ 
+for i, v in next, ToDisable do
+	print(tostring(i)..": "..tostring(v))
+end
+ 
+if ToEnable.FullBright then
+    local Lighting = game:GetService("Lighting")
+ 
+    Lighting.FogColor = Color3.fromRGB(255, 255, 255)
+    Lighting.FogEnd = math.huge
+    Lighting.FogStart = math.huge
+    Lighting.Ambient = Color3.fromRGB(255, 255, 255)
+    Lighting.Brightness = 5
+    Lighting.ColorShift_Bottom = Color3.fromRGB(255, 255, 255)
+    Lighting.ColorShift_Top = Color3.fromRGB(255, 255, 255)
+    Lighting.OutdoorAmbient = Color3.fromRGB(255, 255, 255)
+    Lighting.Outlines = true
+end
+end)
+
+local KillingCheats = PhantomForcesWindow:NewSection("Main Unlock FPS")
+ 
+KillingCheats:CreateButton("Unlock Fps", function()
+  while true do
+    local args = {
+        [1] = 1000
+    }
+    game:GetService("ReplicatedStorage").UpdateFPS:FireServer(unpack(args))
+    wait(0.01)
+end
+end)
+
+local KillingCheats = PhantomForcesWindow:NewSection("Main Speed")
+
+KillingCheats:CreateTextbox("Speed", function(value)
+game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = value
+end)
