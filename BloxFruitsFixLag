@@ -1,18 +1,14 @@
 local Library = loadstring(Game:HttpGet("https://raw.githubusercontent.com/VanThanhIOS/MakeMenu/refs/heads/main/vtiosmake"))()
  
-local PhantomForcesWindow = Library:NewWindow("hieudepzaik14")
+local PhantomForcesWindow = Library:NewWindow("Khôn có tên")
  
-local KillingCheats = PhantomForcesWindow:NewSection("Main FixLagGame")
+local KillingCheats = PhantomForcesWindow:NewSection("FixLag")
  
-KillingCheats:CreateButton("scriptXeroHub", function()
-  getgenv().Team = "Marines"
-
-getgenv().Hide_Menu = false
-
-loadstring(game:HttpGet("https://apixerohub.x10.mx/main.lua"))()
-end) 
-
-KillingCheats:CreateButton("FixLagGame", function()
+KillingCheats:CreateButton("scriptfram", function()
+  loadstring(game:HttpGet("https://apixerohub.x10.mx/main.lua"))()
+end)
+ 
+KillingCheats:CreateButton("FixLag", function()
   local ToDisable = {
 	Textures = true,
 	VisualEffects = true,
@@ -22,7 +18,7 @@ KillingCheats:CreateButton("FixLagGame", function()
 }
  
 local ToEnable = {
-	FullBright = true
+	FullBright = false
 }
  
 local Stuff = {}
@@ -37,14 +33,14 @@ for _, v in next, game:GetDescendants() do
  
 	if ToDisable.Particles then
 		if v:IsA("ParticleEmitter") or v:IsA("Smoke") or v:IsA("Explosion") or v:IsA("Sparkles") or v:IsA("Fire") then
-			v.Enabled = true
+			v.Enabled = false
 			table.insert(Stuff, 1, v)
 		end
 	end
  
 	if ToDisable.VisualEffects then
 		if v:IsA("BloomEffect") or v:IsA("BlurEffect") or v:IsA("DepthOfFieldEffect") or v:IsA("SunRaysEffect") then
-			v.Enabled = true
+			v.Enabled = false
 			table.insert(Stuff, 1, v)
 		end
 	end
