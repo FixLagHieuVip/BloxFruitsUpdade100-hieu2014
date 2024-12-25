@@ -1,11 +1,11 @@
-local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/realredz/BloxFruits/refs/heads/main/Source.lua"))()
+local Library = loadstring(Game:HttpGet("https://raw.githubusercontent.com/VanThanhIOS/MakeMenu/refs/heads/main/vtiosmake"))()
  
 local PhantomForcesWindow = Library:NewWindow("Nguyễn Phú Hiếu")
  
-local KillingCheats = PhantomForcesWindow:NewSection("Main Antilag")
+local KillingCheats = PhantomForcesWindow:NewSection("Fixlag)
  
-KillingCheats:CreateButton("Antilag", function()
-  loadstring(game:HttpGet("https://raw.githubusercontent.com/VanThanhIOS/MakeMenu/refs/heads/main/mainv1.lua.txt"))()
+KillingCheats:CreateButton("redzhub", function()
+  loadstring(game:HttpGet("https://raw.githubusercontent.com/realredz/BloxFruits/refs/heads/main/Source.lua"))()
 end)
  
 KillingCheats:CreateButton("Antilag", function()
@@ -91,4 +91,10 @@ KillingCheats:CreateButton("Unlock Fps", function()
     game:GetService("ReplicatedStorage").UpdateFPS:FireServer(unpack(args))
     wait(0.01)
 end
+end)
+
+local KillingCheats = PhantomForcesWindow:NewSection("Main Speed")
+
+KillingCheats:CreateTextbox("Speed", function(value)
+game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = value
 end)
