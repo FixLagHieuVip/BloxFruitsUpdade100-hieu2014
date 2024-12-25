@@ -1,6 +1,6 @@
 local Library = loadstring(Game:HttpGet("https://raw.githubusercontent.com/VanThanhIOS/MakeMenu/refs/heads/main/vtiosmake"))()
  
-local PhantomForcesWindow = Library:NewWindow("Đổi Name")
+local PhantomForcesWindow = Library:NewWindow("Nguyễn Phú Hiếu")
  
 local KillingCheats = PhantomForcesWindow:NewSection("Main Antilag")
  
@@ -91,10 +91,4 @@ KillingCheats:CreateButton("Unlock Fps", function()
     game:GetService("ReplicatedStorage").UpdateFPS:FireServer(unpack(args))
     wait(0.01)
 end
-end)
-
-local KillingCheats = PhantomForcesWindow:NewSection("Main Speed")
-
-KillingCheats:CreateTextbox("Speed", function(value)
-game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = value
 end)
