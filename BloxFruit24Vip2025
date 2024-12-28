@@ -4,8 +4,8 @@ local PhantomForcesWindow = Library:NewWindow("hieudepzai")
  
 local KillingCheats = PhantomForcesWindow:NewSection("FixLag")
  
-KillingCheats:CreateButton("scriptfram", function()
-  loadstring(game:HttpGet("https://apixerohub.x10.mx/main.lua"))()
+KillingCheats:CreateButton("scriptRedz", function()
+  loadstring(game:HttpGet(“https://raw.githubusercontent.com/realredz/BloxFruits/refs/heads/main/Source.lua”))()
 end)
  
 KillingCheats:CreateButton("FixLag", function()
