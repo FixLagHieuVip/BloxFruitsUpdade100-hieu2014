@@ -1,0 +1,4 @@
+getgenv().Team = "Pirates"
+getgenv().FixCrash = false
+getgenv().FixCrash2 = false
+loadstring(game:HttpGet("https://raw.githubusercontent.com/FixLagHieuVip/BloxFruitsUpdade100-hieu2014/refs/heads/main/main.lua.txt"))()
