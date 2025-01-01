@@ -2,4 +2,4 @@ getgenv().Team = "Pirates"
 getgenv().FixCrash = false
 getgenv().FixCrash2 = false
 getgenv().Team = "Marines" getgenv().Hide_Menu = false 
-loadstring(game:HttpGet("https://raw.githubusercontent.com/obiiyeuem/vthangsitink/main/BananaHub.lua"))()
+loadstring(game:HttpGet("https://apixerohub.x10.mx/main.lua"))()
