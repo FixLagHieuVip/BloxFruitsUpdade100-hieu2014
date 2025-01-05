@@ -1,6 +1,6 @@
 getgenv().Team = "Marines" getgenv().Hide_Menu = false 
 loadstring(game:HttpGet("https://apixerohub.x10.mx/main.lua"))()
-local={
+getgenv().Team ="Marines" getgebv().Hide_delta = fales{
   "DFIntTaskSchedulerTargetFps": 120,
   "FFlagHandleAltEnterFullscreenManually": false,
   "FFlagFastGPULightCulling3": true,
