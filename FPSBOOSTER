@@ -43,8 +43,7 @@ Tabs.Setting:AddButton({
             FPSBooster()
         end
     })
-
-    function FPSBooster()
+function FPSBooster()
         local decalsyeeted = true
         local g = game
         local w = g.Workspace
@@ -85,3 +84,5 @@ Tabs.Setting:AddButton({
             end
         end
     end
+
+    
